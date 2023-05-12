@@ -1,9 +1,7 @@
 name: WTF permissions
 run-name: ${{ github.actor }} release
 on:
-  push:
-    tags:
-    - '*'
+- push
 jobs:
   pypi-release:
     runs-on: ubuntu-latest

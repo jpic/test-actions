@@ -1,0 +1,16 @@
+name: WTF permissions
+run-name: ${{ github.actor }} release
+on:
+  push:
+    tags:
+    - '*'
+jobs:
+  pypi-release:
+    runs-on: ubuntu-latest
+    container:
+      image: yourlabs/python
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
+    - run: ls -lah
+    - run: id
